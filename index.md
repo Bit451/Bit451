@@ -383,7 +383,7 @@ _Now let us go and ignite a firestorm, planting the technological seedlings of t
 * http://www.reddit.com/r/Bit451/
 * https://www.facebook.com/Bit451
 * https://twitter.com/Bit451
-* #Bit451
+* &#35;Bit451
 * http://bitcointalk.bit451.org
 
 ## Donate
@@ -399,7 +399,7 @@ Calen Fretts is a schemer, dreamer, believer, fighter, doer, troublemaker, ideal
 
 MIT.
 
-## /Bit451
+## Bit451. Set. Go!
 
 http://Bit451.org
 https://github.com/Bit451
