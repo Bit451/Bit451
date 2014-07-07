@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Bit451 by Bit451</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Bit451/Bit451">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Bit451/Bit451/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Bit451/Bit451/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Bit451</h1>
+          <p>decentralized/distributed anonymous p2p media network</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Bit451">Bit451</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="bit451" class="anchor" href="#bit451"><span class="octicon octicon-link"></span></a>Bit451</h1>
+
+<p>Bit451 is an open source decentralized/distributed anonymous p2p media network. It has been characterized as "YouTube meets BitTorrent meets Bitcoin".</p>
+
+<p><img src="https://raw.githubusercontent.com/Bit451/Bit451/master/img/bit451-logo-100.png" alt="logo" title="Bit451 logo"></p>
+
+<h2>
+<a name="synopsis" class="anchor" href="#synopsis"><span class="octicon octicon-link"></span></a>Synopsis</h2>
+
+<p>Bit451 is comprised of multiple open source projects working together as one: a video browsing interface, a streaming BitTorrent protocol, and a specialized distributed database are its primary components. You, as a Bit451 user, will have the option to simply access the network directly from your browser, no additional setup required - or, to run a light, streamlined service to help host and contribute to the Bit451 network. Website creators can also easily tap into and serve Bit451 to their visitors using the same light setup configured to their liking.</p>
+
+<p>As for the Bit451 network itself, it will have all the features you have come to know and love: user accounts/profiles, favorites, ratings, subscriptions, playlists, search, recommendations, and much more. The network is community-based, so the users and content you interact with is determined by your preferences and the users you trust. If you don't specifically know or "trust" any users starting out, don't worry, you're not alone and the default settings will work just great. Bit451 will also introduce an automatable cryptocurrency payment plugin system, so that content consumers and producers can buy, sell, and host content for their favorite coins.</p>
+
+<p>At this point you may be wondering, that all sounds great but <a href="#youtube">what's so wrong with YouTube?</a>. (Yes, Bit451 can even read your mind! Pretty amazing so far, right?..)</p>
+
+<p><em>Feedback on any and all aspects of Bit451 are strongly desired and encouraged!</em> Please join in to <a href="#discuss">Discuss</a>, <a href="#donate">Donate</a>, and <a href="#contribute">Contribute</a>!</p>
+
+<h2>
+<a name="inspiration" class="anchor" href="#inspiration"><span class="octicon octicon-link"></span></a>Inspiration</h2>
+
+<p>The name Bit451 was inspired by <em>Fahrenheit 451</em>, a dystopian novel by Ray Bradbury published in 1953 which presents a future society where books are outlawed and "firemen" burn any that are found. A small community, intent on preserving the books, memorizes them to be recreated for future generations. The proper pronunciation of the number is "four five one" according to Bradbury.</p>
+
+<h3>
+<a name="youtube" class="anchor" href="#youtube"><span class="octicon octicon-link"></span></a>YouTube</h3>
+
+<p>The primary catalyst behind this idea is the increasing prevalence of issues and concerns with YouTube:</p>
+
+<ul>
+<li>censorship (via YouTube themselves, government removal requests, invalid copyright claims, "trusted flaggers", etc)</li>
+<li>trackability (view history trails, etc)</li>
+<li>requirement of email, phone, validation, etc</li>
+<li>Google+ forced integration</li>
+<li>annoying ads popping up throughout videos</li>
+<li>unknown future impositions</li>
+<li>features are always dictated by one company</li>
+<li>YouTube is a centralized entity</li>
+</ul><p>To be sure, YouTube has on the whole provided an important service to the internet community, and has the right to do as it wishes within its domain. But hasn't the time has come to unleash the freedom and creativity of <em>all of us</em> into the content sphere?!</p>
+
+<p>Many of these complaints could also extend to other current media powerhouses (Vimeo, Soundcloud, etc), but YouTube garners the most enthusiasm and is the prime focus.</p>
+
+<h3>
+<a name="bittorrent" class="anchor" href="#bittorrent"><span class="octicon octicon-link"></span></a>BitTorrent</h3>
+
+<p>BitTorrent is a technology before its time, the full potential of which has likely not yet been fully realized. Streaming BitTorrent content is the next step in its evolution, and along with it, the Bit451 network.</p>
+
+<h3>
+<a name="bitcoin" class="anchor" href="#bitcoin"><span class="octicon octicon-link"></span></a>Bitcoin</h3>
+
+<p>Bitcoin has sparked the internet's imagination. It has enabled not only new forms of commerce, but of communication, transmission, etc, in ways never dreamed of before, and Bit451 will take that to the next level.</p>
+
+<h2>
+<a name="similar-technologies-and-projects" class="anchor" href="#similar-technologies-and-projects"><span class="octicon octicon-link"></span></a>Similar Technologies and Projects</h2>
+
+<h3>
+<a name="wetube" class="anchor" href="#wetube"><span class="octicon octicon-link"></span></a>WeTube</h3>
+
+<p><a href="https://github.com/wetube/wetube-web">WeTube</a> is a "Decentralized p2p, free, uncensored media provider". While this project is a step in the right direction, it also raises multiple concerns:</p>
+
+<ul>
+<li>
+<em>It is a "Distributed Autonomous Corporation" (DAC)</em>: This adds a level of complexity to the model which will likely confuse or scare away many potential users, as well as distract from the main focus.</li>
+<li>
+<em>It is dependent on its own currency, "MediaCoins"</em>: Creating a new currency seems to be outside the scope of a proper media network; it is more efficient and effective to focus on the media network aspect, let currency developers compete, and find ways to integrate payments as needed while remaining currency neutral.</li>
+<li>
+<em>It reinvents the wheel with "Bitcloud"</em>: Development of a brand new storage protocol named Bitcloud is the backbone of the project and must be completed before WeTube can be created. While there are benefits to creating a new protocol, they don't seem to outweigh the benefits of building on a tried-and-true protocol like BitTorrent.</li>
+<li>
+<em>It is too rigid</em>: More centralized and closed dev team and processes, its own hosted wiki and forum sites, etc, seem to have made its evolution (so far) a bit sluggish. On the other hand, Bit451 aims to have a more flexible and ad-hoc approach: development is open to all, auditable by all, and rewarded via bounties (see <a href="#contribute">Contribute</a>); discussions are encouraged to occur in proven mediums (Reddit/Facebook/Twitter/etc) rather than its own separate website area so as to abate the doldrum effect.</li>
+</ul><p>WeTube may find its strengths in some of these areas, and hopefully it will; however, the overall vision for the project simply differs significantly from Bit451.</p>
+
+<h2>
+<a name="development-and-technical-details" class="anchor" href="#development-and-technical-details"><span class="octicon octicon-link"></span></a>Development and Technical Details</h2>
+
+<h3>
+<a name="methodology" class="anchor" href="#methodology"><span class="octicon octicon-link"></span></a>Methodology</h3>
+
+<p>The main Components can each be separate projects to be forked and merged. Bounties will be divvied out proportionally based on completion of each project; for example, if Murray completes 50%, then Lew forks Murray's project and completes the other 50%, Murray and Lew will each receive 50% of the bounty. Unit tests are strongly encouraged.</p>
+
+<p>When submitting a code change (<em>including to readme or other documentation!</em>), send a <a href="https://help.github.com/articles/using-pull-requests">pull request</a>, then post it in the primary Bit451 discussion area for community review; technical discussion of the pull request is encouraged to take place in the <a href="https://help.github.com/articles/using-pull-requests#pull-request-discussion">pull request discussion</a> area. After it passes and is accepted, a waiting period of approximately one week will occur before bounties are paid out so that other developers can review the code. If it is found that code has been copied from another developer without credit, bounties will not be paid to the plagiarizer, but rather to the original developer.</p>
+
+<p>Draw.io is the recommended online service for UML. Suitable UML diagram XMLs and their PNGs should be added to /uml.</p>
+
+<p>Bit451.org will be used for the <a href="https://help.github.com/articles/user-organization-and-project-pages">GitHub Pages</a> (github.io) Project Page to serve this readme from the base Bit451 project, via the <a href="https://help.github.com/articles/creating-pages-with-the-automatic-generator">automatic generator</a>, using Jekyll. Bit451.com will be used for the Project Page to serve the live Bit451 Portal, since it is static/browser-based. Bit451.net use is TBD. These are initial planned uses.</p>
+
+<h3>
+<a name="components" class="anchor" href="#components"><span class="octicon octicon-link"></span></a>Components</h3>
+
+<h4>
+<a name="phase-1-development" class="anchor" href="#phase-1-development"><span class="octicon octicon-link"></span></a>Phase 1 Development</h4>
+
+<p>The goal of this phase is to create a standardized, usable, aesthetic, browser-based frontend which can access the content network.</p>
+
+<h5>
+<a name="portal" class="anchor" href="#portal"><span class="octicon octicon-link"></span></a>Portal</h5>
+
+<p>The browser/viewport/gateway. This is the interface used to access and interact with content from the network. This should be usable on a local machine (via a local engine) as well as hosted from a server, where it can be additionally configured/customized.</p>
+
+<p><strong>MediaDrop</strong></p>
+
+<p>MediaDrop is a modular video, audio, and podcast publication platform which can be extended with plugins: "The Web's Open Source Video Platform".</p>
+
+<p><strong>Action Item</strong>: Fork MediaDrop to <em>Bit451 Portal</em>. Slim it down to just the "client-side" interface.</p>
+
+<p><em>See Also</em></p>
+
+<ul>
+<li>MediaDrop
+
+<ul>
+<li><a href="http://mediadrop.net/">http://mediadrop.net/</a></li>
+<li><a href="http://demo.mediadrop.net/">http://demo.mediadrop.net/</a></li>
+<li><a href="https://github.com/mediadrop/mediadrop">https://github.com/mediadrop/mediadrop</a></li>
+</ul>
+</li>
+</ul><h5>
+<a name="file-transfer" class="anchor" href="#file-transfer"><span class="octicon octicon-link"></span></a>File Transfer</h5>
+
+<p>This is the protocol by which content files will be transmitted. The BitTorrent protocol network should be sufficient. Tying into this existing network has many advantages including established roots, wide user base, infinite content waiting to be brought to the masses, development community, etc.</p>
+
+<p>Even though BitTorrent will be used, development should keep in mind the possibility of switching to or adding additional protocols in the future (i.e. remain as protocol-agnostic as possible).</p>
+
+<p><em>See Also</em></p>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/BitTorrent_%28protocol%29">https://en.wikipedia.org/wiki/BitTorrent_%28protocol%29</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Anonymous_P2P">https://en.wikipedia.org/wiki/Anonymous_P2P</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Freenet">https://en.wikipedia.org/wiki/Freenet</a></li>
+<li><a href="https://en.wikipedia.org/wiki/I2P">https://en.wikipedia.org/wiki/I2P</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29">https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29</a></li>
+</ul><h5>
+<a name="portal-gateway" class="anchor" href="#portal-gateway"><span class="octicon octicon-link"></span></a>Portal Gateway</h5>
+
+<p>This is the content bridge between the File Transfer network and the Portal.</p>
+
+<p><strong>WebTorrent</strong>
+WebTorrent is a streaming torrent client for the browser using WebRTC. The Project Goal is to build a browser BitTorrent client that requires no install (no plugin/extension/etc.) and fully-interoperates with the regular BitTorrent network.</p>
+
+<p>Since WebTorrent is web-first, it's simple for users who do not understand .torrent files, magnet links, NATs, etc. By making BitTorrent easier, it will be accessible to new swathes of users who were previously intimidated, confused, or unwilling to install a program on their machine to participate.</p>
+
+<p><strong>Action Item</strong>: Fork WebTorrent to <em>Bit451 Portal Gateway</em>. Implement any necessary additional functionality.</p>
+
+<p><em>Alternative:</em></p>
+
+<p><strong>Btapp.js</strong>
+The BitTorrent project Btapp.js can be used to bring the BitTorrent network to the browser. This project integrates with the BitTorrent Torque browser plugin or a number of other common software clients. For the purposes of this project let us assume that the Torque browser plugin is used, as it is the simplest way for the user to click-and-go.</p>
+
+<p>A demo site/project called <a href="https://github.com/bittorrenttorque/onehash.com">oneHash</a> exists to show some Btapp.js capabilities. It works directly hosted from the Github project, however, the domain is expired. You can still <a href="http://bittorrenttorque.github.io/onehash.com/">try it here</a>, or you can edit your computer's hosts file and point onehash.com to Github's IP (currently 192.30.252.153) as noted in <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages#apex-domains">Setting up a custom domain with GitHub Pages</a>.</p>
+
+<p>oneHash demonstrates the ability to stream torrent content via the browser. Currently only audio streaming is functional; video streaming is not yet completed as noted in the <a href="http://labs.bittorrent.com/developers/torque/code-snippets.html#file-streaming">Code Snippets</a> page. If this is still the case by the time Bit451 development begins, it will need to be implemented.</p>
+
+<p><em>See Also</em></p>
+
+<ul>
+<li>WebTorrent
+
+<ul>
+<li><a href="https://github.com/feross/webtorrent">https://github.com/feross/webtorrent</a></li>
+</ul>
+</li>
+<li>Btapp.js
+
+<ul>
+<li><a href="http://btappjs.com/">http://btappjs.com/</a></li>
+<li><a href="https://github.com/bittorrenttorque/btapp">https://github.com/bittorrenttorque/btapp</a></li>
+<li><a href="https://github.com/bittorrenttorque/onehash.com">https://github.com/bittorrenttorque/onehash.com</a></li>
+<li><a href="http://labs.bittorrent.com/developers/torque/api-visualizer.html">http://labs.bittorrent.com/developers/torque/api-visualizer.html</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/WebRTC">https://en.wikipedia.org/wiki/WebRTC</a></li>
+<li><a href="http://webp2p.org/">http://webp2p.org/</a></li>
+<li><a href="https://shareit.5apps.com/">https://shareit.5apps.com/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Libtorrent#Piece_picker">https://en.wikipedia.org/wiki/Libtorrent#Piece_picker</a></li>
+</ul><h4>
+<a name="phase-1-results" class="anchor" href="#phase-1-results"><span class="octicon octicon-link"></span></a>Phase 1 Results</h4>
+
+<p>Via the static web files hosted locally or on any website (including the Github project page), users can now tap into and stream any media file on the BitTorrent network using the Bit451 Portal interface.</p>
+
+<h4>
+<a name="phase-2-development" class="anchor" href="#phase-2-development"><span class="octicon octicon-link"></span></a>Phase 2 Development</h4>
+
+<p>The goal of this phase is to implement attributes of the Bit451 overlay network. The database uses trusted timestamping to verify data changes (most recently timestamped data trumps). A thin client will be implemented to connect the Bit451 network to the BitTorrent network and to allow Bit451 to be run server-side so site owners can provide their visitors with client-less access to the Bit451 network by retrieving/transcoding/caching/serving content.</p>
+
+<h5>
+<a name="bit451-service" class="anchor" href="#bit451-service"><span class="octicon octicon-link"></span></a>Bit451 Service</h5>
+
+<p>This is the user connection to the Bit451 network. It can also enable servers in retrieving/transcoding/caching/serving content and serving it directly to their visitors in the browser, replacing the need for potential users to use a BitTorrent client and download data to their computer.</p>
+
+<p>Bit451 servers can configure which content they wish to serve: from any users in their network, from Subscriptions only, from Favorites only, etc.</p>
+
+<p>Video transcoding/serving is already built into the Bit451 Portal system, so it simply needs to be adapted for Bit451's architecture.</p>
+
+<p>A similar GUI client such as Bitcoin or qBittorrent can be looked to as a starting point, and stripped down to what's needed.</p>
+
+<p>As much as possible this should be decoupled from the Bit451 components' specific architectures.</p>
+
+<p><em>See Also</em></p>
+
+<ul>
+<li><a href="https://github.com/bitcoin/bitcoin">https://github.com/bitcoin/bitcoin</a></li>
+<li><a href="https://github.com/qbittorrent/qBittorrent">https://github.com/qbittorrent/qBittorrent</a></li>
+<li><a href="https://github.com/spesmilo/electrum">https://github.com/spesmilo/electrum</a></li>
+</ul><h5>
+<a name="distributed-data" class="anchor" href="#distributed-data"><span class="octicon octicon-link"></span></a>Distributed Data</h5>
+
+<p>The core of the Bit451 overlay network is its distributed data system. Options to store and access this data: 1) distributed databases (DDB), 2) distributed hash tables (DHTs). Option 1, DDB, is the Bit451 method of choice. It will be used in a conceptually new and exciting manner for P2P networks. The replication method devised is modeled on the concept of communities and community-based trust.</p>
+
+<p><strong>OrientDB</strong>
+OrientDB is web ready (natively supports HTTP/RESTful protocol/JSON), cross-platform, embeddable (with local mode to bypass the server), has a footprint of only about 1MB for the full server, is well-supported/documented, supports drivers for Javascript (among others), database- and record-level security, and distributed architecture.</p>
+
+<p>A primary functionality to be implemented for Bit451 is a security layer to: sign and verify records, selectively determine which records to query from/replicate, identify/block malicious nodes, etc.</p>
+
+<p>Bit451 will embed the database in a thin wrapper client and interact via its Javascript driver. Each node acts as a server and represents an Account. Each record should be signed with a hash of ALL its fields (including ID, timestamp, and Account ID, etc) and public and private key, and then when verifying simply remove the signature (sig) and check against it. The client should enforce incoming data integrity, rate limit/protect against DoS attacks, etc (basically act as database gatekeeper).</p>
+
+<p>Database connections should also be authenticated so that, for example, a hosted Bit451 installation cannot rely on a single naive user as its direct database connection/server. The user should also have the option to allow unauthenticated connections, i.e. to be an open host.</p>
+
+<p>The last known IP/port for each node will, at least in this Phase, be stored in the Account record. Each time a node reconnects it will update its IP/port in its Account record (if it has changed), sign it, and replicate it to the network. It will also update its own TCP/IP member list after replicating <em>from</em> the network. This way the network always knows the most current connection to each node.</p>
+
+<p>Accounts can also verify themselves to their web domain to engender trust (like a certification, or "cert"). For example, if the user of Account 123 is affiliated with foo.com, a DNS TXT record of "123" could be set at bit451.foo.com; then, the Account's cert field set to bit451.foo.com. Now when viewing Account 123, an Ajax DNS lookup is done at bit451.foo.com, and when successful, foo.com is shown as the certified domain.</p>
+
+<p>The database structures used are typically regarded as database "tables" which have "fields"; in OrientDB these are actually called classes, and have properties. Records are accessible network-wide but security is record-level.</p>
+
+<p>Each created Bit451 account will have self-owned classes, both vertices and edges. These will be replicated (read-only) across nodes on a determined basis: for each account a node networks with, said account's classes are replicated on that node.</p>
+
+<p>Accounts can also Recommend other Accounts. Whereas Subscribe denotes a personal preference ("I want to watch this Account"), Recommend denotes an interpersonal reference ("I think others should watch this Account"). Likewise, Accounts can Mimic another Account's Recommendations, meaning that it will include all of that Account's Recommendations in its network (minus any Accounts it has ignored). Therefore, Subscribe will replicate one Account, and Mimic will replicate many Accounts.</p>
+
+<p>The nodes <em>which replicate an account</em> are its Replication Network (R-Net). The nodes <em>which an account replicates</em> are its Transmission Network (T-Net), since it transmits them. Each R-Net and T-Net will include at least one node (itself). Note that *-Nets usually aren't necessarily bi-directional; for example, if Account 1 subscribes to Account 2, and Account 2 subscribes to Account 3, then node 1's T-Net is {1,2} and R-Net is {1}, node 2's T-Net is {2,3} and R-Net is {1,2}, and node 3's T-Net is {3} and R-Net is {2,3}.</p>
+
+<p>A replication Hook will be used to replicate only records from one's T-Net (aggregation of one's Subscriptions, Recommendations, and Mimics, minus Ignores).</p>
+
+<p><em>Bootstrapping</em></p>
+
+<p>Because of the community-oriented nature of Bit451 networks, "bootstrapping" is not, in the conventional sense, necessary. Rather, new users will simply Subscribe (network with) and/or Mimic (network with connections of) the Account(s) they trust. Ideally a new user can simply Mimic a trusted Account from their community, and will instantly join the network of all of that Account's Recommendations.</p>
+
+<p><em>Account Recovery</em></p>
+
+<p>In the event that a private key is compromised, there should be a recovery method. Traditional methods such as email aren't suitable, and a new ID can't simply be generated since the account is tied to the ID. </p>
+
+<p>The solution is a master public key (MPK)/<a href="https://bitcoin.org/en/developer-guide#hardened-keys">hardened child public key</a> scheme. The MPK will be the Account ID. Then, a child public key is used to sign records. The lowest key should be used first.</p>
+
+<p>To recover the account, the user simply "burns" their current key. Records are then signed with the next-highest key. When the replication filter verifies records, it must first simply verify that the signing key is valid for the Account ID, and then, the highest key should win. This means the user has the ability to burn as many keys as needed; their account is never unrecoverable, since the use of hardened keys means that a compromised child private key does not compromise the master private key.</p>
+
+<p>In order to resolve the event that a user's whole account is simply lost rather than compromised (ex: computer crash), accounts should be generated from a <a href="https://en.bitcoin.it/wiki/Deterministic_wallet">deterministic wallet</a> seed, or master private key, similar to the <a href="https://electrum.org/seed.html">Electrum seed</a>. When creating a new account, the user is highly encouraged to record their seed somewhere safe. Bit451 Accounts, then, are somewhat comparable to Bitcoin wallets, at least insofar as functionality within the client. Also see <a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki">BIP32</a>.</p>
+
+<p><em>Data Integrity</em></p>
+
+<p>Incoming replication data will hit a Hook which will verify each record's sig and, if forged, add the IP to its blacklist.</p>
+
+<p>Deletions are a special case: records should have their "deleted" bit set by the owner; the deleted bit should always be queried against. Records should not be actually deleted from the database, since deleted records cannot be verified by the replication filter after deletion.</p>
+
+<p><strong>Action Item</strong>: Fork OrientDB to <em>Bit451 Database</em>. Implement any default config changes (group name/password, database name/password, etc) and other necessary modifications.</p>
+
+<p><em>Notes</em></p>
+
+<ul>
+<li>Hot change of distributed configuration not available until 2.0 (<a href="https://github.com/orientechnologies/orientdb/wiki/Distributed-Sharding#limitation">https://github.com/orientechnologies/orientdb/wiki/Distributed-Sharding#limitation</a>)</li>
+</ul><p><em>See Also</em></p>
+
+<ul>
+<li>OrientDB
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/OrientDB">https://en.wikipedia.org/wiki/OrientDB</a></li>
+<li><a href="https://github.com/orientechnologies/orientdb">https://github.com/orientechnologies/orientdb</a></li>
+<li><a href="https://github.com/orientechnologies/orientdb/wiki/Distributed-Sharding">https://github.com/orientechnologies/orientdb/wiki/Distributed-Sharding</a></li>
+<li><a href="https://github.com/orientechnologies/orientdb/wiki/Distributed-Architecture">https://github.com/orientechnologies/orientdb/wiki/Distributed-Architecture</a></li>
+<li><a href="https://github.com/orientechnologies/orientdb/wiki/Distributed-Architecture-Lifecycle">https://github.com/orientechnologies/orientdb/wiki/Distributed-Architecture-Lifecycle</a></li>
+<li><a href="https://github.com/orientechnologies/orientdb/wiki/Security#record-level-security">https://github.com/orientechnologies/orientdb/wiki/Security#record-level-security</a></li>
+<li><a href="https://github.com/orientechnologies/orientdb/wiki/Hook">https://github.com/orientechnologies/orientdb/wiki/Hook</a></li>
+<li><a href="https://github.com/orientechnologies/orientdb/wiki/Javascript-Driver">https://github.com/orientechnologies/orientdb/wiki/Javascript-Driver</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Distributed_database">https://en.wikipedia.org/wiki/Distributed_database</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Distributed_data_store">https://en.wikipedia.org/wiki/Distributed_data_store</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Document-oriented_database">https://en.wikipedia.org/wiki/Document-oriented_database</a></li>
+<li><a href="https://www.youtube.com/watch?v=Aq3a-_O2NcI">Bitcoin: Digital signatures</a></li>
+<li>Other Popular DDBs
+
+<ul>
+<li><a href="https://github.com/voldemort/voldemort">https://github.com/voldemort/voldemort</a></li>
+<li><a href="https://github.com/apache/cassandra">https://github.com/apache/cassandra</a></li>
+<li><a href="https://github.com/mongodb/mongo">https://github.com/mongodb/mongo</a></li>
+</ul>
+</li>
+</ul><p><em>The following features will be elements of the Distributed Data system.</em></p>
+
+<h6>
+<a name="accounts" class="anchor" href="#accounts"><span class="octicon octicon-link"></span></a>Accounts</h6>
+
+<p>Each Account represents a user, similar to profiles or channels. Properties include ID, name, about, favorites[], ratings[], subscriptions[], recommendations[], ignores[], mimics[], address (IP/port), cert (DNS TXT record), created, updated, deleted?, key, sig.</p>
+
+<ul>
+<li>Favorites: Each Favorite represents a reference to a Content.</li>
+<li>Ratings: Each Rating represents a reference to a Content (similar to a Like/Dislike or Upvote/Downvote, i.e. binary).</li>
+<li>Subscriptions: Each Subscription represents a reference to an Account, which the user wishes to subscribe to.</li>
+<li>Recommendations: Each Recommendation represents a reference to an Account, which the user wishes to recommend to others.</li>
+<li>Ignores: Each Ignore represents a reference to an Account, which the user wishes to ignore.</li>
+<li>Mimics: Each Mimic represents a reference to an Account, which the user wishes to mimic (copy/imitate) the Subscriptions, Recommendations, and/or Ignores of.</li>
+</ul><h6>
+<a name="content" class="anchor" href="#content"><span class="octicon octicon-link"></span></a>Content</h6>
+
+<p>Each Content represents a user-created reference to a torrent. Properties include ID, Account ID, torrent ID, name, description, tags[], type{video, audio, image, text, other}, created, updated, deleted?, key, sig.</p>
+
+<p>Any user can, of course, add any existing torrent they wish. Bit451 will also introduce a brief template (with flags) to add to your new torrent which essentially verifies you as the owner.</p>
+
+<h6>
+<a name="search" class="anchor" href="#search"><span class="octicon octicon-link"></span></a>Search</h6>
+
+<p>Since Bit451 data is stored in a DDB, this is relatively simple, as searches are just a query algorithm (DHT searches would be more complex).</p>
+
+<p><em>See Also</em></p>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/BitTorrent_%28protocol%29#Decentralized_keyword_search">https://en.wikipedia.org/wiki/BitTorrent_%28protocol%29#Decentralized_keyword_search</a></li>
+<li><a href="https://en.wikipedia.org/wiki/YaCy">https://en.wikipedia.org/wiki/YaCy</a></li>
+</ul><h4>
+<a name="phase-2-results" class="anchor" href="#phase-2-results"><span class="octicon octicon-link"></span></a>Phase 2 Results</h4>
+
+<p>At this point users can log into and participate in Bit451 via a small app on their local machine, or they can guest browse Bit451 content via hosted Bit451 sites.</p>
+
+<h4>
+<a name="phase-3-development" class="anchor" href="#phase-3-development"><span class="octicon octicon-link"></span></a>Phase 3 Development</h4>
+
+<p>The goal of this phase is to complete/enhance/granularize the Bit451 functionality and user experience. More technical details of this phase will be fleshed out as development progresses.</p>
+
+<h5>
+<a name="anonymity" class="anchor" href="#anonymity"><span class="octicon octicon-link"></span></a>Anonymity</h5>
+
+<p>Provide ability to disable last known IP/port field in Account records, essentially allowing nodes to push/replicate data without being able to be connected to.</p>
+
+<p>Strive to work with Tor, Freenet, I2P, etc.</p>
+
+<h5>
+<a name="payments" class="anchor" href="#payments"><span class="octicon octicon-link"></span></a>Payments</h5>
+
+<p>A plugin API should be implemented to enable plugins (short scripts) to be written for cryptocurrencies and other payment systems, which can tie into various Bit451 hooks, allowing automated hosting agreements and payments.</p>
+
+<p>Each Content record (and, of course, its torrent data) is hosted only on those nodes which choose to do so. This can include:</p>
+
+<ul>
+<li>The content's creator</li>
+<li>A user who likes the content and wants to help host it</li>
+<li>A user who will help host the content in exchange for a fee</li>
+<li>A user who will pay for permission to host the content (i.e. distributor; think Netflix)</li>
+</ul><p>Etc. In this way, content is hosted to the extent which it is demanded.</p>
+
+<h5>
+<a name="distributed-data-additions" class="anchor" href="#distributed-data-additions"><span class="octicon octicon-link"></span></a>Distributed Data Additions</h5>
+
+<h6>
+<a name="reputation" class="anchor" href="#reputation"><span class="octicon octicon-link"></span></a>Reputation</h6>
+
+<p>Community interactions, such as Payments, require a level of trust. Reputation will enable users to judge the reliability of other users within their community. A good/bad/neutral rating could be associated with each Payment made via Bit451.</p>
+
+<h6>
+<a name="hashtags" class="anchor" href="#hashtags"><span class="octicon octicon-link"></span></a>Hashtags</h6>
+
+<p>Tagging and searching of Content and Accounts via Hashtags.</p>
+
+<h6>
+<a name="playlists" class="anchor" href="#playlists"><span class="octicon octicon-link"></span></a>Playlists</h6>
+
+<p>Can be stored locally initially, and eventually via optionally (paid?) remotely hosted protocol.</p>
+
+<h6>
+<a name="similar-accountscontent" class="anchor" href="#similar-accountscontent"><span class="octicon octicon-link"></span></a>Similar Accounts/Content</h6>
+
+<p>Graph depth can be explored to find similar data to recommend to the user.</p>
+
+<h5>
+<a name="bit451-lite" class="anchor" href="#bit451-lite"><span class="octicon octicon-link"></span></a>Bit451 Lite</h5>
+
+<p>Provides the ability to <em>fully</em> participate in Bit451 actions (creating/modifying accounts/content, etc) directly via the browser using Javascript, so the user is not required to run the Bit451 Service to access the network.</p>
+
+<h4>
+<a name="phase-3-results" class="anchor" href="#phase-3-results"><span class="octicon octicon-link"></span></a>Phase 3 Results</h4>
+
+<p>Bit451 complete. It is now a fully-featured, browser-based, distributed media network.</p>
+
+<h4>
+<a name="post-development" class="anchor" href="#post-development"><span class="octicon octicon-link"></span></a>Post-Development</h4>
+
+<p>At this point we proceed with any new additions, bug fixes, etc. Some additional ideas include:</p>
+
+<ul>
+<li>Hooking into other networks such as Freenet (and other file sharing darknets) in addition to BitTorrent</li>
+</ul><h3>
+<a name="more-technical-links" class="anchor" href="#more-technical-links"><span class="octicon octicon-link"></span></a>More Technical Links</h3>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Distributed_hash_table">https://en.wikipedia.org/wiki/Distributed_hash_table</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mainline_DHT">https://en.wikipedia.org/wiki/Mainline_DHT</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kademlia">https://en.wikipedia.org/wiki/Kademlia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Anonymous_P2P">https://en.wikipedia.org/wiki/Anonymous_P2P</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Darknet_%28file_sharing%29">https://en.wikipedia.org/wiki/Darknet_%28file_sharing%29</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Freenet">https://en.wikipedia.org/wiki/Freenet</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29">https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Magnet_URI_scheme">https://en.wikipedia.org/wiki/Magnet_URI_scheme</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cryptocurrency">https://en.wikipedia.org/wiki/Cryptocurrency</a></li>
+<li><a href="https://en.bitcoin.it/wiki/Blockchain">https://en.bitcoin.it/wiki/Blockchain</a></li>
+<li><a href="https://en.bitcoin.it/wiki/Wallet">https://en.bitcoin.it/wiki/Wallet</a></li>
+<li><a href="https://unhosted.org/">https://unhosted.org/</a></li>
+<li>
+<a href="http://edtechdev.wordpress.com/2013/05/10/serverless-unhosted-nobackend/">http://edtechdev.wordpress.com/2013/05/10/serverless-unhosted-nobackend/</a> [see: WebP2P section]</li>
+</ul><h2>
+<a name="uml" class="anchor" href="#uml"><span class="octicon octicon-link"></span></a>UML</h2>
+
+<p><img src="https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-network-community.png" alt="Fig. 1">
+Fig. 1: Example of a network "community"</p>
+
+<h2>
+<a name="contribute" class="anchor" href="#contribute"><span class="octicon octicon-link"></span></a>Contribute</h2>
+
+<p>There is essentially little-to-no "official" development team, as development is crowdsourced, ad hoc, and decentralized. In fact, the community as a whole is the dev team. This means that <em>anyone</em> is able to contribute and collaborate in whatever ways work best for them. With the existence of Github, code can be forked and built upon any number of times by any number of contributors until a working solution is created. Solutions will then be audited, tested, and assessed by the community before being accepted.</p>
+
+<p>The primary reason to contribute to Bit451 is simply because you believe in the idea and want to make it happen; but an additional reason is that, to the extent possible, Bit451 will be <em>bounty-driven</em>. A significant amount of Bitcoin donations raised (as much as possible after paying other costs) will be used for Bitcoin bounties on Bit451's projects, both directly and via <a href="http://www.bountysource.com/">Bountysource</a>.</p>
+
+<p>If a deeply established, respected, and community-loved open source dev(s) were to volunteer for the role of official Bit451 code gatekeeper, and the Bit451 community overwhelmingly supported it, that would be cool.</p>
+
+<p><em>Now let us go and ignite a firestorm, planting the technological seedlings of the future over a trail of obsolete overgrowth!</em></p>
+
+<h2>
+<a name="roadmap--timeline" class="anchor" href="#roadmap--timeline"><span class="octicon octicon-link"></span></a>Roadmap / Timeline</h2>
+
+<p>3 Phases; the goal is ~1 month per phase (after initial discussion/planning phase). It should be completed by the end of the year. Yes, this is ambitious, but very much possible!</p>
+
+<h2>
+<a name="goals-and-features" class="anchor" href="#goals-and-features"><span class="octicon octicon-link"></span></a>Goals and Features</h2>
+
+<ul>
+<li>be as ambitious as possible and push the envelope... but still work!</li>
+<li>improve and reuse other open source projects as possible</li>
+<li>don't reinvent the wheel</li>
+<li>cryptocurrency neutrality</li>
+<li>best practices and conventions, clean code, organization</li>
+<li>abstraction, inheritance, code reuse</li>
+<li>standardized, usable, aesthetic</li>
+<li>browser-based, unhosted/serverless, decoupled from specific frameworks/languages/etc as much as possible</li>
+<li>elegance and simplicity</li>
+<li>visionary</li>
+<li>far-reaching implications, not only on immediate systems like media but on greater internet-wide concepts and processes</li>
+</ul><h2>
+<a name="discuss" class="anchor" href="#discuss"><span class="octicon octicon-link"></span></a>Discuss</h2>
+
+<ul>
+<li><a href="http://www.reddit.com/r/Bit451/">http://www.reddit.com/r/Bit451/</a></li>
+<li><a href="https://www.facebook.com/Bit451">https://www.facebook.com/Bit451</a></li>
+<li><a href="https://twitter.com/Bit451">https://twitter.com/Bit451</a></li>
+<li>#Bit451</li>
+<li><a href="http://bitcointalk.bit451.org">http://bitcointalk.bit451.org</a></li>
+</ul><h2>
+<a name="donate" class="anchor" href="#donate"><span class="octicon octicon-link"></span></a>Donate</h2>
+
+<ul>
+<li><a href="https://coinbase.com/Bit451">https://coinbase.com/Bit451</a></li>
+<li><a href="https://www.indiegogo.com/individuals/8110381/campaigns">https://www.indiegogo.com/individuals/8110381/campaigns</a></li>
+</ul><h2>
+<a name="architect" class="anchor" href="#architect"><span class="octicon octicon-link"></span></a>Architect</h2>
+
+<p>Calen Fretts is a schemer, dreamer, believer, fighter, doer, troublemaker, idealist, voluntaryist, and many other -ists and -ers. Basically he's probably just crazy.</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT.</p>
+
+<h2>
+<a name="bit451-1" class="anchor" href="#bit451-1"><span class="octicon octicon-link"></span></a>/Bit451</h2>
+
+<p><a href="http://Bit451.org">http://Bit451.org</a>
+<a href="https://github.com/Bit451">https://github.com/Bit451</a></p>
+
+<p>Bit451 should be used morally.</p>
+
+<p>"Here's to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. They're not fond of rules. And they have no respect for the status quo. You can quote them, disagree with them, glorify or vilify them. But the only thing you can't do is ignore them. Because they change things. They push the human race forward. And while some may see them as the crazy ones, we see genius. Because the people who are crazy enough to think they can change the world, are the ones who do."</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-1759939-87");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
