@@ -851,14 +851,21 @@ section #title .credits.right {
 }
 
 /* custom */
+#header {
+  position: relative;
+}
+section {
+  margin-top: 10px;
+}
 section #title {
   margin: 0;
 }
-
 section #title .credits {
   display: none;
 }
-
+menu, ol, ul {
+  padding-left: 20px;
+}
 .header-link {
   margin-left: -1.25em;
   padding-right: 0.25em;
@@ -868,7 +875,6 @@ section #title .credits {
   -moz-transition: opacity 0.2s ease-in-out 0.1s;
   -ms-transition: opacity 0.2s ease-in-out 0.1s;
 }
-
 h1:hover .header-link,
 h2:hover .header-link,
 h3:hover .header-link,
