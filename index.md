@@ -19,9 +19,13 @@ Bit451 is an open source decentralized/distributed anonymous p2p media network. 
 
 ## Synopsis
 
-Bit451 is comprised of multiple open source projects working together as one: a video browsing interface, a streaming BitTorrent protocol, and a specialized distributed database are its primary components. You, as a Bit451 user, will have the option to simply access the network directly from your browser, no additional setup required - or, to run a light, streamlined service to help host and contribute to the Bit451 network. Website creators can also easily tap into and serve Bit451 to their visitors using the same light setup configured to their liking.
+Bit451 is comprised of multiple open source projects working together as one: a video browsing interface, a mesh of file transfer protocols/networks with streaming content capabilities, and a specialized distributed database, are its primary components. You, as a Bit451 user, will have the option to simply access the network directly from your browser, no additional setup required - or, to run a light, streamlined service to help host and contribute to the Bit451 network. Website creators can also easily tap into and serve Bit451 to their visitors using the same light setup configured to their liking.
 
 As for the Bit451 network itself, it will have all the features you have come to know and love: user accounts/profiles, favorites, ratings, subscriptions, playlists, search, recommendations, and much more. The network is community-based, so the users and content you interact with is determined by your preferences and the users you trust. If you don't specifically know or "trust" any users starting out, don't worry, you're not alone and the default settings will work just great. Bit451 will also introduce an automatable cryptocurrency payment plugin system, so that content consumers and producers can buy, sell, and host content for their favorite coins.
+
+For broader reuse, Bit451 will create:
+* a P2P distributed database which can easily be reused by other P2P apps; see _Bit451 Database_ under [Distributed Data](#distributed-data)
+* a P2P file sharing network crossover methodology/capabilities to bridge and integrate multiple different protocols; see [File Transfer](#file-transfer)
 
 At this point you may be wondering, that all sounds great but [what's so wrong with YouTube?](#youtube). (Yes, Bit451 can even read your mind! Pretty amazing so far, right?..)
 
@@ -35,7 +39,7 @@ The name Bit451 was inspired by _Fahrenheit 451_, a dystopian novel by Ray Bradb
 
 The primary catalyst behind this idea is the increasing prevalence of issues and concerns with YouTube:
 
-* censorship (via YouTube themselves, government removal requests, invalid copyright claims, "trusted flaggers", etc)
+* censorship ([via YouTube themselves](https://en.wikipedia.org/wiki/Censorship_by_Google#YouTube), government removal requests, invalid copyright claims, "trusted flaggers", [governments and organizations blocking YouTube](https://en.wikipedia.org/wiki/YouTube_Censorship), etc)
 * trackability (view history trails, etc)
 * requirement of email, phone, validation, etc
 * Google+ forced integration
@@ -63,7 +67,7 @@ Bitcoin has sparked the internet's imagination. It has enabled not only new form
 [WeTube](https://github.com/wetube/wetube-web) is a "Decentralized p2p, free, uncensored media provider". While this project is a step in the right direction, it also raises multiple concerns:
 * _It is a "Distributed Autonomous Corporation" (DAC)_: This adds a level of complexity to the model which will likely confuse or scare away many potential users, as well as distract from the main focus.
 * _It is dependent on its own currency, "MediaCoins"_: Creating a new currency seems to be outside the scope of a proper media network; it is more efficient and effective to focus on the media network aspect, let currency developers compete, and find ways to integrate payments as needed while remaining currency neutral.
-* _It reinvents the wheel with "Bitcloud"_: Development of a brand new storage protocol named Bitcloud is the backbone of the project and must be completed before WeTube can be created. While there are benefits to creating a new protocol, they don't seem to outweigh the benefits of building on a tried-and-true protocol like BitTorrent.
+* _It reinvents the wheel with "Bitcloud"_: Development of a brand new storage protocol named Bitcloud is the backbone of the project and must be completed before WeTube can be created. While there are benefits to creating a new protocol, they don't seem to outweigh the benefits of building on tried-and-true P2P file sharing protocols, at least in initia.
 * _It is too rigid_: More centralized and closed dev team and processes, its own hosted wiki and forum sites, etc, seem to have made its evolution (so far) a bit sluggish. On the other hand, Bit451 aims to have a more flexible and ad-hoc approach: development is open to all, auditable by all, and rewarded via bounties (see [Contribute](#contribute)); discussions are encouraged to occur in proven mediums (Reddit/Facebook/Twitter/etc) rather than its own separate website area so as to abate the doldrum effect.
 
 WeTube may find its strengths in some of these areas, and hopefully it will; however, the overall vision for the project simply differs significantly from Bit451.
@@ -94,7 +98,7 @@ __MediaDrop__
 
 MediaDrop is a modular video, audio, and podcast publication platform which can be extended with plugins: "The Web's Open Source Video Platform".
 
-__Action Item__: Fork MediaDrop to _Bit451 Portal_. Slim it down to just the "client-side" interface.
+__Action Item__: Fork MediaDrop to _Bit451 Portal_. Slim it down to just the "client-side" interface, and integrate programmatic interfaces for File Transfer networks.
 
 _See Also_
 * MediaDrop
@@ -104,11 +108,20 @@ _See Also_
 
 ##### File Transfer
 
-This is the protocol by which content files will be transmitted. The BitTorrent protocol network should be sufficient. Tying into this existing network has many advantages including established roots, wide user base, infinite content waiting to be brought to the masses, development community, etc.
+These are the protocols by which content files will be transmitted. BitTorrent, Storj, Freenet, I2P, Tor, MaidSafe, Bitcloud, Tahoe-LAFS, Dropbox, etc are all examples of candidates. File Transfer networks used in Bit451 will need a streaming capability if it does not already exist. This ability to tie into many different existing and new networks has many advantages including greater user choice, established roots, wide user base, infinite content waiting to be brought to the masses, development community, etc. The end result is a P2P file sharing network crossover methodology/capabilities to bridge and integrate multiple different protocols.
 
-Even though BitTorrent will be used, development should keep in mind the possibility of switching to or adding additional protocols in the future (i.e. remain as protocol-agnostic as possible).
+A protocol-agnostic, generic interface will be available to be implemented for each protocol (in the Portal).
 
 _See Also_
+* https://github.com/bittorrent/libutp
+* https://github.com/Storj/Metadisk
+* https://github.com/freenet/fred-staging
+* https://github.com/i2p/i2p.i2p
+* https://github.com/maidsafe/MaidSafe
+* https://github.com/wetube/bitcloud
+* https://github.com/tahoe-lafs/tahoe-lafs
+* https://github.com/dropbox/dropbox-js
+* https://github.com/TheTorProject
 * https://en.wikipedia.org/wiki/BitTorrent_%28protocol%29
 * https://en.wikipedia.org/wiki/Anonymous_P2P
 * https://en.wikipedia.org/wiki/Freenet
@@ -117,14 +130,14 @@ _See Also_
 
 ##### Portal Gateway
 
-This is the content bridge between the File Transfer network and the Portal.
+This is the content bridge between the File Transfer networks and the Portal (as seen here, for BitTorrent; __some File Transfer protocols may not require this if the functionality already exists__).
 
 __WebTorrent__
 WebTorrent is a streaming torrent client for the browser using WebRTC. The Project Goal is to build a browser BitTorrent client that requires no install (no plugin/extension/etc.) and fully-interoperates with the regular BitTorrent network.
 
 Since WebTorrent is web-first, it's simple for users who do not understand .torrent files, magnet links, NATs, etc. By making BitTorrent easier, it will be accessible to new swathes of users who were previously intimidated, confused, or unwilling to install a program on their machine to participate.
 
-__Action Item__: Fork WebTorrent to _Bit451 Portal Gateway_. Implement any necessary additional functionality.
+__Action Item__: Fork WebTorrent to _Bit451 Portal Gateway - BitTorrent_, if not yet complete, and contribute to completion of the project, implementing any additional functionality if necessary.
 
 _Alternative:_
 
@@ -143,6 +156,7 @@ _See Also_
   * https://github.com/bittorrenttorque/btapp
   * https://github.com/bittorrenttorque/onehash.com
   * http://labs.bittorrent.com/developers/torque/api-visualizer.html
+* https://github.com/mafintosh/peerflix
 * https://en.wikipedia.org/wiki/WebRTC
 * http://webp2p.org/
 * https://shareit.5apps.com/
@@ -150,21 +164,21 @@ _See Also_
 
 #### Phase 1 Results
 
-Via the static web files hosted locally or on any website (including the Github project page), users can now tap into and stream any media file on the BitTorrent network using the Bit451 Portal interface.
+Via the static web files hosted locally or on any website (including the live Github project page at Bit451.com), users can now tap into and stream any media file on the File Transfer networks using the Bit451 Portal interface.
 
 #### Phase 2 Development
 
-The goal of this phase is to implement attributes of the Bit451 overlay network. The database uses trusted timestamping to verify data changes (most recently timestamped data trumps). A thin client will be implemented to connect the Bit451 network to the BitTorrent network and to allow Bit451 to be run server-side so site owners can provide their visitors with client-less access to the Bit451 network by retrieving/transcoding/caching/serving content.
+The goal of this phase is to implement attributes of the Bit451 overlay network. The database uses trusted timestamping to verify data changes (most recently timestamped data trumps). A thin client will be implemented to connect the Bit451 network to the File Transfer networks and to allow Bit451 to be run server-side so site owners can provide their visitors with client-less access to the Bit451 network by retrieving/transcoding/caching/serving content.
 
 ##### Bit451 Service
 
-This is the user connection to the Bit451 network. It can also enable servers in retrieving/transcoding/caching/serving content and serving it directly to their visitors in the browser, replacing the need for potential users to use a BitTorrent client and download data to their computer.
+This is the user connection to the Bit451 network. It can optionally also enable servers in retrieving/transcoding/caching content from the File Transfer networks and serving it directly to their visitors in the browser, replacing the need for potential users to use network-specific clients and download data to their computer.
 
 Bit451 servers can configure which content they wish to serve: from any users in their network, from Subscriptions only, from Favorites only, etc.
 
 Video transcoding/serving is already built into the Bit451 Portal system, so it simply needs to be adapted for Bit451's architecture.
 
-A similar GUI client such as Bitcoin or qBittorrent can be looked to as a starting point, and stripped down to what's needed.
+A similar GUI client such as Bitcoin/qBittorrent/Electrum can be looked to as a starting point, and stripped down to what's needed.
 
 As much as possible this should be decoupled from the Bit451 components' specific architectures.
 
@@ -175,7 +189,7 @@ _See Also_
 
 ##### Distributed Data
 
-The core of the Bit451 overlay network is its distributed data system. Options to store and access this data: 1) distributed databases (DDB), 2) distributed hash tables (DHTs). Option 1, DDB, is the Bit451 method of choice. It will be used in a conceptually new and exciting manner for P2P networks. The replication method devised is modeled on the concept of communities and community-based trust.
+The core of the Bit451 overlay network is its distributed data system. Options to store and access this data: 1) distributed databases (DDB), 2) distributed hash tables (DHTs). Option 1, DDB, is the Bit451 method of choice. It will be used in a conceptually new and exciting manner for P2P networks, the end result being a P2P distributed database which can easily be reused by other P2P apps. The replication method devised is modeled on the concept of communities and community-based trust.
 
 __OrientDB__
 OrientDB is web ready (natively supports HTTP/RESTful protocol/JSON), cross-platform, embeddable (with local mode to bypass the server), has a footprint of only about 1MB for the full server, is well-supported/documented, supports drivers for Javascript (among others), database- and record-level security, and distributed architecture.
@@ -259,9 +273,9 @@ Each Account represents a user, similar to profiles or channels. Properties incl
 
 ###### Content
 
-Each Content represents a user-created reference to a torrent. Properties include ID, Account ID, torrent ID, name, description, tags[], type{video, audio, image, text, other}, created, updated, deleted?, key, sig.
+Each Content represents a user-created reference to content on a P2P file sharing network. Properties include ID, Account ID, address{} (object denoting network, ID, and any other data required for that network), name, description, tags[], type{video, audio, image, text, other}, created, updated, deleted?, key, sig.
 
-Any user can, of course, add any existing torrent they wish. Bit451 will also introduce a brief template (with flags) to add to your new torrent which essentially verifies you as the owner.
+Any user can, of course, add any existing network content they wish to their Bit451 account. Bit451 will also introduce a brief template (with flags) to add to your content metadata which essentially verifies you as the owner.
 
 ###### Search
 
@@ -281,15 +295,13 @@ The goal of this phase is to complete/enhance/granularize the Bit451 functionali
 
 ##### Anonymity
 
-Provide ability to disable last known IP/port field in Account records, essentially allowing nodes to push/replicate data without being able to be connected to.
-
-Strive to work with Tor, Freenet, I2P, etc.
+Provide ability to disable last known IP/port field in Account records, essentially allowing nodes to push/replicate data without being able to be connected to, as well as ability to encrypt traffic.
 
 ##### Payments
 
 A plugin API should be implemented to enable plugins (short scripts) to be written for cryptocurrencies and other payment systems, which can tie into various Bit451 hooks, allowing automated hosting agreements and payments.
 
-Each Content record (and, of course, its torrent data) is hosted only on those nodes which choose to do so. This can include:
+Each Content record (and, of course, its data) is hosted only on those nodes which choose to do so. This can include:
 * The content's creator
 * A user who likes the content and wants to help host it
 * A user who will help host the content in exchange for a fee
@@ -327,7 +339,7 @@ Bit451 complete. It is now a fully-featured, browser-based, distributed media ne
 
 At this point we proceed with any new additions, bug fixes, etc. Some additional ideas include:
 
-* Hooking into other networks such as Freenet (and other file sharing darknets) in addition to BitTorrent
+* Hooking into as many additional P2P file sharing networks as possible
 
 ### More Technical Links
 
@@ -377,6 +389,7 @@ _Now let us go and ignite a firestorm, planting the technological seedlings of t
 * elegance and simplicity
 * visionary
 * far-reaching implications, not only on immediate systems like media but on greater internet-wide concepts and processes
+* crossover appeal: "plug-and-play" interchangeability between different protocols which accomplish a similar goal
 
 ## Discuss
 
@@ -389,7 +402,7 @@ _Now let us go and ignite a firestorm, planting the technological seedlings of t
 ## Donate
 
 * https://coinbase.com/Bit451
-* https://www.indiegogo.com/individuals/8110381/campaigns
+* https://www.indiegogo.com/projects/bit451
 
 ## Architect
 
@@ -402,6 +415,7 @@ MIT.
 ## Bit451. Set. Go!
 
 http://Bit451.org
+
 https://github.com/Bit451
 
 Bit451 should be used morally.
