@@ -13,6 +13,7 @@ Bit451 is comprised of multiple open source projects working together as one: a 
 As for the Bit451 network itself, it will have all the features you have come to know and love: user accounts/profiles, favorites, ratings, subscriptions, playlists, search, recommendations, and much more. The network is community-based, so the users and content you interact with is determined by your preferences and the users you trust. If you don't specifically know or "trust" any users starting out, don't worry, you're not alone and the default settings will work just great. Bit451 will also introduce an automatable cryptocurrency payment plugin system, so that content consumers and producers can buy, sell, and host content for their favorite coins.
 
 For broader reuse, Bit451 will create:
+
 * a P2P distributed database which can easily be reused by other P2P apps; see _Bit451 Database_ under [Distributed Data](#distributed-data)
 * a P2P file sharing network crossover methodology/capabilities to bridge and integrate multiple different protocols; see [File Transfer](#file-transfer)
 
@@ -54,6 +55,7 @@ Bitcoin has sparked the internet's imagination. It has enabled not only new form
 ### WeTube
 
 [WeTube](https://github.com/wetube/wetube-web) is a "Decentralized p2p, free, uncensored media provider". While this project is a step in the right direction, it also raises multiple concerns:
+
 * _It is a "Distributed Autonomous Corporation" (DAC)_: This adds a level of complexity to the model which will likely confuse or scare away many potential users, as well as distract from the main focus.
 * _It is dependent on its own currency, "MediaCoins"_: Creating a new currency seems to be outside the scope of a proper media network; it is more efficient and effective to focus on the media network aspect, let currency developers compete, and find ways to integrate payments as needed while remaining currency neutral.
 * _It reinvents the wheel with "Bitcloud"_: Development of a brand new storage protocol named Bitcloud is the backbone of the project and must be completed before WeTube can be created. While there are benefits to creating a new protocol, they don't seem to outweigh the benefits of building on tried-and-true P2P file sharing protocols, at least in initia.
@@ -90,6 +92,7 @@ MediaDrop is a modular video, audio, and podcast publication platform which can 
 __Action Item__: Fork MediaDrop to _Bit451 Portal_. Slim it down to just the "client-side" interface, and integrate programmatic interfaces for File Transfer networks.
 
 _See Also_
+
 * MediaDrop
   * http://mediadrop.net/
   * http://demo.mediadrop.net/
@@ -102,6 +105,7 @@ These are the protocols by which content files will be transmitted. BitTorrent, 
 A protocol-agnostic, generic interface will be available to be implemented for each protocol (in the Portal).
 
 _See Also_
+
 * https://github.com/bittorrent/libutp
 * https://github.com/Storj/Metadisk
 * https://github.com/freenet/fred-staging
@@ -138,6 +142,7 @@ A demo site/project called [oneHash](https://github.com/bittorrenttorque/onehash
 oneHash demonstrates the ability to stream torrent content via the browser. Currently only audio streaming is functional; video streaming is not yet completed as noted in the [Code Snippets](http://labs.bittorrent.com/developers/torque/code-snippets.html#file-streaming) page. If this is still the case by the time Bit451 development begins, it will need to be implemented.
 
 _See Also_
+
 * WebTorrent
   * https://github.com/feross/webtorrent
 * Btapp.js
@@ -172,6 +177,7 @@ A similar GUI client such as Bitcoin/qBittorrent/Electrum can be looked to as a 
 As much as possible this should be decoupled from the Bit451 components' specific architectures.
 
 _See Also_
+
 * https://github.com/bitcoin/bitcoin
 * https://github.com/qbittorrent/qBittorrent
 * https://github.com/spesmilo/electrum
@@ -226,9 +232,11 @@ Deletions are a special case: records should have their "deleted" bit set by the
 __Action Item__: Fork OrientDB to _Bit451 Database_. Implement any default config changes (group name/password, database name/password, etc) and other necessary modifications.
 
 _Notes_
+
 * Hot change of distributed configuration not available until 2.0 (https://github.com/orientechnologies/orientdb/wiki/Distributed-Sharding#limitation)
 
 _See Also_
+
 * OrientDB
   * https://en.wikipedia.org/wiki/OrientDB
   * https://github.com/orientechnologies/orientdb
@@ -271,6 +279,7 @@ Any user can, of course, add any existing network content they wish to their Bit
 Since Bit451 data is stored in a DDB, this is relatively simple, as searches are just a query algorithm (DHT searches would be more complex).
 
 _See Also_
+
 * https://en.wikipedia.org/wiki/BitTorrent_%28protocol%29#Decentralized_keyword_search
 * https://en.wikipedia.org/wiki/YaCy
 
@@ -291,6 +300,7 @@ Provide ability to disable last known IP/port field in Account records, essentia
 A plugin API should be implemented to enable plugins (short scripts) to be written for cryptocurrencies and other payment systems, which can tie into various Bit451 hooks, allowing automated hosting agreements and payments.
 
 Each Content record (and, of course, its data) is hosted only on those nodes which choose to do so. This can include:
+
 * The content's creator
 * A user who likes the content and wants to help host it
 * A user who will help host the content in exchange for a fee
