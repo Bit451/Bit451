@@ -126,6 +126,7 @@ _See Also_
 This is the content bridge between the File Transfer networks and the Portal (as seen here, for BitTorrent; __some File Transfer protocols may not require this if the functionality already exists__).
 
 __WebTorrent__
+
 WebTorrent is a streaming torrent client for the browser using WebRTC. The Project Goal is to build a browser BitTorrent client that requires no install (no plugin/extension/etc.) and fully-interoperates with the regular BitTorrent network.
 
 Since WebTorrent is web-first, it's simple for users who do not understand .torrent files, magnet links, NATs, etc. By making BitTorrent easier, it will be accessible to new swathes of users who were previously intimidated, confused, or unwilling to install a program on their machine to participate.
@@ -135,6 +136,7 @@ __Action Item__: Fork WebTorrent to _Bit451 Portal Gateway - BitTorrent_, if not
 _Alternative:_
 
 __Btapp.js__
+
 The BitTorrent project Btapp.js can be used to bring the BitTorrent network to the browser. This project integrates with the BitTorrent Torque browser plugin or a number of other common software clients. For the purposes of this project let us assume that the Torque browser plugin is used, as it is the simplest way for the user to click-and-go.
 
 A demo site/project called [oneHash](https://github.com/bittorrenttorque/onehash.com) exists to show some Btapp.js capabilities. It works directly hosted from the Github project, however, the domain is expired. You can still [try it here](http://bittorrenttorque.github.io/onehash.com/), or you can edit your computer's hosts file and point onehash.com to Github's IP (currently 192.30.252.153) as noted in [Setting up a custom domain with GitHub Pages](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages#apex-domains).
@@ -168,25 +170,28 @@ The goal of this phase is to implement attributes of the Bit451 overlay network.
 
 This is the user connection to the Bit451 network. It can optionally also enable servers in retrieving/transcoding/caching content from the File Transfer networks and serving it directly to their visitors in the browser, replacing the need for potential users to use network-specific clients and download data to their computer.
 
-Bit451 servers can configure which content they wish to serve: from any users in their network, from Subscriptions only, from Favorites only, etc.
+Bit451 servers can configure which content they wish to serve: from any users in their network, from Subscriptions only, from Favorites only, etc. Video transcoding/serving is already built into the Bit451 Portal system, so it simply needs to be adapted for Bit451's architecture.
 
-Video transcoding/serving is already built into the Bit451 Portal system, so it simply needs to be adapted for Bit451's architecture.
+As much as possible this should be decoupled from the Bit451 components' specific architectures. The ability to auto-update should also be built-in.
 
-A similar GUI client such as Bitcoin/qBittorrent/Electrum can be looked to as a starting point, and stripped down to what's needed.
-
-As much as possible this should be decoupled from the Bit451 components' specific architectures.
+A similar GUI client (see examples below) can be used as a starting point, and stripped down to what's needed.
 
 _See Also_
 
 * https://github.com/bitcoin/bitcoin
-* https://github.com/qbittorrent/qBittorrent
 * https://github.com/spesmilo/electrum
+* https://github.com/jim618/multibit
+* https://github.com/qbittorrent/qBittorrent
+* https://en.bitcoin.it/wiki/Clients
 
-##### Distributed Data
+<a name="distributed-data"></a>
+
+##### Database
 
 The core of the Bit451 overlay network is its distributed data system. Options to store and access this data: 1) distributed databases (DDB), 2) distributed hash tables (DHTs). Option 1, DDB, is the Bit451 method of choice. It will be used in a conceptually new and exciting manner for P2P networks, the end result being a P2P distributed database which can easily be reused by other P2P apps. The replication method devised is modeled on the concept of communities and community-based trust.
 
 __OrientDB__
+
 OrientDB is web ready (natively supports HTTP/RESTful protocol/JSON), cross-platform, embeddable (with local mode to bypass the server), has a footprint of only about 1MB for the full server, is well-supported/documented, supports drivers for Javascript (among others), database- and record-level security, and distributed architecture.
 
 A primary functionality to be implemented for Bit451 is a security layer to: sign and verify records, selectively determine which records to query from/replicate, identify/block malicious nodes, etc.
@@ -223,6 +228,8 @@ To recover the account, the user simply "burns" their current key. Records are t
 
 In order to resolve the event that a user's whole account is simply lost rather than compromised (ex: computer crash), accounts should be generated from a [deterministic wallet](https://en.bitcoin.it/wiki/Deterministic_wallet) seed, or master private key, similar to the [Electrum seed](https://electrum.org/seed.html). When creating a new account, the user is highly encouraged to record their seed somewhere safe. Bit451 Accounts, then, are somewhat comparable to Bitcoin wallets, at least insofar as functionality within the client. Also see [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki).
 
+See _Web Wallets_ links below for implementations.
+
 _Data Integrity_
 
 Incoming replication data will hit a Hook which will verify each record's sig and, if forged, add the IP to its blacklist.
@@ -246,6 +253,10 @@ _See Also_
   * https://github.com/orientechnologies/orientdb/wiki/Security#record-level-security
   * https://github.com/orientechnologies/orientdb/wiki/Hook
   * https://github.com/orientechnologies/orientdb/wiki/Javascript-Driver
+* Web Wallets
+  * https://github.com/greenaddress/WalletCrx
+  * https://github.com/carbonwallet/carbonwallet.github.io
+  * https://github.com/blockchain/My-Wallet [non-deterministic]
 * https://en.wikipedia.org/wiki/Distributed_database
 * https://en.wikipedia.org/wiki/Distributed_data_store
 * https://en.wikipedia.org/wiki/Document-oriented_database
