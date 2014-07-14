@@ -14,8 +14,9 @@ As for the Bit451 network itself, it will have all the features you have come to
 
 For broader reuse, Bit451 will create:
 
-* a P2P distributed database which can easily be reused by other P2P apps; see _Bit451 Database_ under [Distributed Data](#distributed-data)
+* a P2P distributed database which can easily be repurposed by other P2P apps; see [Database](#database)
 * a P2P file sharing network crossover methodology/capabilities to bridge and integrate multiple different protocols; see [File Transfer](#file-transfer)
+* a P2P serverless deterministic account-based social content network frontend; see [Portal](#portal)
 
 At this point you may be wondering, that all sounds great but [what's so wrong with YouTube?](#youtube). (Yes, Bit451 can even read your mind! Pretty amazing so far, right?..)
 
@@ -371,6 +372,9 @@ At this point we proceed with any new additions, bug fixes, etc. Some additional
 
 ![Fig. 1](https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-network-community.png)
 Fig. 1: Example of a network "community"
+
+![Fig. 2](https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-technology-stack.png)
+Fig. 2: Bit451 technology stack
 
 ## Contribute
 
