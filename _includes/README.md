@@ -370,11 +370,13 @@ At this point we proceed with any new additions, bug fixes, etc. Some additional
 
 ## UML
 
-![Fig. 1](https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-network-community.png)
-Fig. 1: Example of a network "community"
+![technology-stack](https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-technology-stack.png)
 
-![Fig. 2](https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-technology-stack.png)
-Fig. 2: Bit451 technology stack
+technology-stack: Bit451 technology stack
+
+![network-community](https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-network-community.png)
+
+network-community: Bit451 network "community" example
 
 ## Contribute
 
