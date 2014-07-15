@@ -74,7 +74,7 @@ When submitting a code change (_including to readme or other documentation!_), s
 
 Draw.io is the recommended online service for UML. Suitable UML diagram XMLs and their PNGs should be added to /uml.
 
-Bit451.org will be used for the [GitHub Pages](https://help.github.com/articles/user-organization-and-project-pages) (github.io) Project Page to serve this readme from the base Bit451 project, via the [automatic generator](https://help.github.com/articles/creating-pages-with-the-automatic-generator), using Jekyll. Bit451.com will be used for the Project Page to serve the live Bit451 Portal, since it is static/browser-based. Bit451.net use is TBD. These are initial planned uses.
+Bit451.org will be used for the [GitHub Pages](https://help.github.com/articles/user-organization-and-project-pages) (github.io) Project Page to serve this readme from the base Bit451 project, via the [automatic generator](https://help.github.com/articles/creating-pages-with-the-automatic-generator), using Jekyll. Bit451.com will be used for the Project Page to serve (via submodule) the live Bit451 Portal, since it is static/browser-based. Bit451.net use is TBD. These are initial planned uses.
 
 ### Components
 
@@ -215,11 +215,11 @@ The nodes *which replicate an account* are its Replication Network (R-Net). The 
 
 A replication Hook will be used to replicate only records from one's T-Net (aggregation of one's Subscriptions, Recommendations, and Mimics, minus Ignores).
 
-_Bootstrapping_
+###### Bootstrapping
 
 Because of the community-oriented nature of Bit451 networks, "bootstrapping" is not, in the conventional sense, necessary. Rather, new users will simply Subscribe (network with) and/or Mimic (network with connections of) the Account(s) they trust. Ideally a new user can simply Mimic a trusted Account from their community, and will instantly join the network of all of that Account's Recommendations.
 
-_Account Recovery_
+###### Account Recovery
 
 In the event that a private key is compromised, there should be a recovery method. Traditional methods such as email aren't suitable, and a new ID can't simply be generated since the account is tied to the ID. 
 
@@ -231,7 +231,7 @@ In order to resolve the event that a user's whole account is simply lost rather 
 
 See _Web Wallets_ links below for implementations.
 
-_Data Integrity_
+###### Data Integrity
 
 Incoming replication data will hit a Hook which will verify each record's sig and, if forged, add the IP to its blacklist.
 
@@ -267,7 +267,7 @@ _See Also_
   * https://github.com/apache/cassandra
   * https://github.com/mongodb/mongo
 
-_The following features will be elements of the Distributed Data system._
+##### Database Classes
 
 ###### Accounts
 
@@ -286,7 +286,7 @@ Each Content represents a user-created reference to content on a P2P file sharin
 
 Any user can, of course, add any existing network content they wish to their Bit451 account. Bit451 will also introduce a brief template (with flags) to add to your content metadata which essentially verifies you as the owner.
 
-###### Search
+##### Database Search
 
 Since Bit451 data is stored in a DDB, this is relatively simple, as searches are just a query algorithm (DHT searches would be more complex).
 
@@ -320,7 +320,9 @@ Each Content record (and, of course, its data) is hosted only on those nodes whi
 
 Etc. In this way, content is hosted to the extent which it is demanded.
 
-##### Distributed Data Additions
+<a name="distributed-data-additions"></a>
+
+##### Database Additions
 
 ###### Reputation
 
@@ -370,13 +372,13 @@ At this point we proceed with any new additions, bug fixes, etc. Some additional
 
 ## UML
 
-![technology-stack](https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-technology-stack.png)
+![Bit451 technology stack](https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-technology-stack.png)
 
-technology-stack: Bit451 technology stack
+Bit451 technology stack
 
-![network-community](https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-network-community.png)
+![Bit451 network "community" example](https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-network-community.png)
 
-network-community: Bit451 network "community" example
+Bit451 network "community" example
 
 ## Contribute
 
