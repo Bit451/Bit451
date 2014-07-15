@@ -1,12 +1,12 @@
 # Bit451
 
-Bit451 is an open source decentralized/distributed anonymous p2p media network. It has been characterized as "YouTube meets BitTorrent meets Bitcoin".
+Bit451 is an open source decentralized / distributed anonymous p2p media network. It has been characterized as "YouTube meets BitTorrent meets Bitcoin".
 
 ![logo][logo]
 
 [logo]: https://raw.githubusercontent.com/Bit451/Bit451/master/img/bit451-logo-100.png "Bit451 logo"
 
-## Synopsis
+# Synopsis
 
 Bit451 is comprised of multiple open source projects working together as one: a video browsing interface, a mesh of file transfer protocols/networks with streaming content capabilities, and a specialized distributed database, are its primary components. You, as a Bit451 user, will have the option to simply access the network directly from your browser, no additional setup required - or, to run a light, streamlined service to help host and contribute to the Bit451 network. Website creators can also easily tap into and serve Bit451 to their visitors using the same light setup configured to their liking.
 
@@ -22,11 +22,11 @@ At this point you may be wondering, that all sounds great but [what's so wrong w
 
 _Feedback on any and all aspects of Bit451 are strongly desired and encouraged!_ Please join in to [Discuss](#discuss), [Donate](#donate), and [Contribute](#contribute)!
 
-## Inspiration
+# Inspiration
 
 The name Bit451 was inspired by _Fahrenheit 451_, a dystopian novel by Ray Bradbury published in 1953 which presents a future society where books are outlawed and "firemen" burn any that are found. A small community, intent on preserving the books, memorizes them to be recreated for future generations. The proper pronunciation of the number is "four five one" according to Bradbury.
 
-### YouTube
+## YouTube
 
 The primary catalyst behind this idea is the increasing prevalence of issues and concerns with YouTube:
 
@@ -43,17 +43,17 @@ To be sure, YouTube has on the whole provided an important service to the intern
 
 Many of these complaints could also extend to other current media powerhouses (Vimeo, Soundcloud, etc), but YouTube garners the most enthusiasm and is the prime focus.
 
-### BitTorrent
+## BitTorrent
 
 BitTorrent is a technology before its time, the full potential of which has likely not yet been fully realized. Streaming BitTorrent content is the next step in its evolution, and along with it, the Bit451 network.
 
-### Bitcoin
+## Bitcoin
 
 Bitcoin has sparked the internet's imagination. It has enabled not only new forms of commerce, but of communication, transmission, etc, in ways never dreamed of before, and Bit451 will take that to the next level.
 
-## Similar Technologies and Projects
+# Similar Technologies and Projects
 
-### WeTube
+## WeTube
 
 [WeTube](https://github.com/wetube/wetube-web) is a "Decentralized p2p, free, uncensored media provider". While this project is a step in the right direction, it also raises multiple concerns:
 
@@ -64,9 +64,9 @@ Bitcoin has sparked the internet's imagination. It has enabled not only new form
 
 WeTube may find its strengths in some of these areas, and hopefully it will; however, the overall vision for the project simply differs significantly from Bit451.
 
-## Development and Technical Details
+# Development and Technical Details
 
-### Methodology
+## Methodology
 
 The main Components can each be separate projects to be forked and merged. Bounties will be divvied out proportionally based on completion of each project; for example, if Murray completes 50%, then Lew forks Murray's project and completes the other 50%, Murray and Lew will each receive 50% of the bounty. Unit tests are strongly encouraged.
 
@@ -76,13 +76,13 @@ Draw.io is the recommended online service for UML. Suitable UML diagram XMLs and
 
 Bit451.org will be used for the [GitHub Pages](https://help.github.com/articles/user-organization-and-project-pages) (github.io) Project Page to serve this readme from the base Bit451 project, via the [automatic generator](https://help.github.com/articles/creating-pages-with-the-automatic-generator), using Jekyll. Bit451.com will be used for the Project Page to serve (via submodule) the live Bit451 Portal, since it is static/browser-based. Bit451.net use is TBD. These are initial planned uses.
 
-### Components
+## Components
 
-#### Phase 1 Development
+### Phase 1 Development
 
 The goal of this phase is to create a standardized, usable, aesthetic, browser-based frontend which can access the content network.
 
-##### Portal
+#### Portal
 
 The browser/viewport/gateway. This is the interface used to access and interact with content from the network. This should be usable on a local machine (via a local engine) as well as hosted from a server, where it can be additionally configured/customized.
 
@@ -99,7 +99,7 @@ _See Also_
   * http://demo.mediadrop.net/
   * https://github.com/mediadrop/mediadrop
 
-##### File Transfer
+#### File Transfer
 
 These are the protocols by which content files will be transmitted. BitTorrent, Storj, Freenet, I2P, Tor, MaidSafe, Bitcloud, Tahoe-LAFS, Dropbox, etc are all examples of candidates. File Transfer networks used in Bit451 will need a streaming capability if it does not already exist. This ability to tie into many different existing and new networks has many advantages including greater user choice, established roots, wide user base, infinite content waiting to be brought to the masses, development community, etc. The end result is a P2P file sharing network crossover methodology/capabilities to bridge and integrate multiple different protocols.
 
@@ -122,7 +122,7 @@ _See Also_
 * https://en.wikipedia.org/wiki/I2P
 * https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29
 
-##### Portal Gateway
+#### Portal Gateway
 
 This is the content bridge between the File Transfer networks and the Portal (as seen here, for BitTorrent; __some File Transfer protocols may not require this if the functionality already exists__).
 
@@ -159,15 +159,15 @@ _See Also_
 * https://shareit.5apps.com/
 * https://en.wikipedia.org/wiki/Libtorrent#Piece_picker
 
-#### Phase 1 Results
+### Phase 1 Results
 
 Via the static web files hosted locally or on any website (including the live Github project page at Bit451.com), users can now tap into and stream any media file on the File Transfer networks using the Bit451 Portal interface.
 
-#### Phase 2 Development
+### Phase 2 Development
 
 The goal of this phase is to implement attributes of the Bit451 overlay network. The database uses trusted timestamping to verify data changes (most recently timestamped data trumps). A thin client will be implemented to connect the Bit451 network to the File Transfer networks and to allow Bit451 to be run server-side so site owners can provide their visitors with client-less access to the Bit451 network by retrieving/transcoding/caching/serving content.
 
-##### Bit451 Service
+#### Bit451 Service
 
 This is the user connection to the Bit451 network. It can optionally also enable servers in retrieving/transcoding/caching content from the File Transfer networks and serving it directly to their visitors in the browser, replacing the need for potential users to use network-specific clients and download data to their computer.
 
@@ -187,13 +187,15 @@ _See Also_
 
 <a name="distributed-data"></a>
 
-##### Database
+#### Database
 
-The core of the Bit451 overlay network is its distributed data system. Options to store and access this data: 1) distributed databases (DDB), 2) distributed hash tables (DHTs). Option 1, DDB, is the Bit451 method of choice. It will be used in a conceptually new and exciting manner for P2P networks, the end result being a P2P distributed database which can easily be reused by other P2P apps. The replication method devised is modeled on the concept of communities and community-based trust.
+The core of the Bit451 overlay network is its distributed data system. Options to store and access this data: 1) distributed database (DDB), 2) distributed hash table (DHT). Option 1, DDB, is the Bit451 method of choice. It will be used in a conceptually new and exciting manner for P2P networks, the end result being a P2P distributed database which can easily be reused by other P2P apps. The replication method devised is modeled on the concept of communities and community-based trust.
 
 __OrientDB__
 
 OrientDB is web ready (natively supports HTTP/RESTful protocol/JSON), cross-platform, embeddable (with local mode to bypass the server), has a footprint of only about 1MB for the full server, is well-supported/documented, supports drivers for Javascript (among others), database- and record-level security, and distributed architecture.
+
+##### Database Functionality
 
 A primary functionality to be implemented for Bit451 is a security layer to: sign and verify records, selectively determine which records to query from/replicate, identify/block malicious nodes, etc.
 
@@ -237,6 +239,29 @@ Incoming replication data will hit a Hook which will verify each record's sig an
 
 Deletions are a special case: records should have their "deleted" bit set by the owner; the deleted bit should always be queried against. Records should not be actually deleted from the database, since deleted records cannot be verified by the replication filter after deletion.
 
+###### Search
+
+Since Bit451 data is stored in a DDB, this is relatively simple, as searches are just a query algorithm (DHT searches would be more complex).
+
+##### Database Classes
+
+###### Accounts
+
+Each Account represents a user, similar to profiles or channels. Properties include ID, name, about, favorites[], ratings[], subscriptions[], recommendations[], ignores[], mimics[], address (IP/port), cert (DNS TXT record), created, updated, deleted?, key, sig.
+
+* Favorites: Each Favorite represents a reference to a Content.
+* Ratings: Each Rating represents a reference to a Content (similar to a Like/Dislike or Upvote/Downvote, i.e. binary).
+* Subscriptions: Each Subscription represents a reference to an Account, which the user wishes to subscribe to.
+* Recommendations: Each Recommendation represents a reference to an Account, which the user wishes to recommend to others.
+* Ignores: Each Ignore represents a reference to an Account, which the user wishes to ignore.
+* Mimics: Each Mimic represents a reference to an Account, which the user wishes to mimic (copy/imitate) the Subscriptions, Recommendations, and/or Ignores of.
+
+###### Content
+
+Each Content represents a user-created reference to content on a P2P file sharing network. Properties include ID, Account ID, address{} (object denoting network, ID, and any other data required for that network), name, description, tags[], type{video, audio, image, text, other}, created, updated, deleted?, key, sig.
+
+Any user can, of course, add any existing network content they wish to their Bit451 account. Bit451 will also introduce a brief template (with flags) to add to your content metadata which essentially verifies you as the owner.
+
 __Action Item__: Fork OrientDB to _Bit451 Database_. Implement any default config changes (group name/password, database name/password, etc) and other necessary modifications.
 
 _Notes_
@@ -266,48 +291,23 @@ _See Also_
   * https://github.com/voldemort/voldemort
   * https://github.com/apache/cassandra
   * https://github.com/mongodb/mongo
+* Search Algorithms
+  * https://en.wikipedia.org/wiki/BitTorrent_%28protocol%29#Decentralized_keyword_search
+  * https://en.wikipedia.org/wiki/YaCy
 
-##### Database Classes
-
-###### Accounts
-
-Each Account represents a user, similar to profiles or channels. Properties include ID, name, about, favorites[], ratings[], subscriptions[], recommendations[], ignores[], mimics[], address (IP/port), cert (DNS TXT record), created, updated, deleted?, key, sig.
-
-* Favorites: Each Favorite represents a reference to a Content.
-* Ratings: Each Rating represents a reference to a Content (similar to a Like/Dislike or Upvote/Downvote, i.e. binary).
-* Subscriptions: Each Subscription represents a reference to an Account, which the user wishes to subscribe to.
-* Recommendations: Each Recommendation represents a reference to an Account, which the user wishes to recommend to others.
-* Ignores: Each Ignore represents a reference to an Account, which the user wishes to ignore.
-* Mimics: Each Mimic represents a reference to an Account, which the user wishes to mimic (copy/imitate) the Subscriptions, Recommendations, and/or Ignores of.
-
-###### Content
-
-Each Content represents a user-created reference to content on a P2P file sharing network. Properties include ID, Account ID, address{} (object denoting network, ID, and any other data required for that network), name, description, tags[], type{video, audio, image, text, other}, created, updated, deleted?, key, sig.
-
-Any user can, of course, add any existing network content they wish to their Bit451 account. Bit451 will also introduce a brief template (with flags) to add to your content metadata which essentially verifies you as the owner.
-
-##### Database Search
-
-Since Bit451 data is stored in a DDB, this is relatively simple, as searches are just a query algorithm (DHT searches would be more complex).
-
-_See Also_
-
-* https://en.wikipedia.org/wiki/BitTorrent_%28protocol%29#Decentralized_keyword_search
-* https://en.wikipedia.org/wiki/YaCy
-
-#### Phase 2 Results
+### Phase 2 Results
 
 At this point users can log into and participate in Bit451 via a small app on their local machine, or they can guest browse Bit451 content via hosted Bit451 sites.
 
-#### Phase 3 Development
+### Phase 3 Development
 
 The goal of this phase is to complete/enhance/granularize the Bit451 functionality and user experience. More technical details of this phase will be fleshed out as development progresses.
 
-##### Anonymity
+#### Anonymity
 
 Provide ability to disable last known IP/port field in Account records, essentially allowing nodes to push/replicate data without being able to be connected to, as well as ability to encrypt traffic.
 
-##### Payments
+#### Payments
 
 A plugin API should be implemented to enable plugins (short scripts) to be written for cryptocurrencies and other payment systems, which can tie into various Bit451 hooks, allowing automated hosting agreements and payments.
 
@@ -322,7 +322,7 @@ Etc. In this way, content is hosted to the extent which it is demanded.
 
 <a name="distributed-data-additions"></a>
 
-##### Database Additions
+#### Database Additions
 
 ###### Reputation
 
@@ -340,21 +340,21 @@ Can be stored locally initially, and eventually via optionally (paid?) remotely 
 
 Graph depth can be explored to find similar data to recommend to the user.
 
-##### Bit451 Lite
+#### Bit451 Lite
 
 Provides the ability to _fully_ participate in Bit451 actions (creating/modifying accounts/content, etc) directly via the browser using Javascript, so the user is not required to run the Bit451 Service to access the network.
 
-#### Phase 3 Results
+### Phase 3 Results
 
 Bit451 complete. It is now a fully-featured, browser-based, distributed media network.
 
-#### Post-Development
+### Post-Development
 
 At this point we proceed with any new additions, bug fixes, etc. Some additional ideas include:
 
 * Hooking into as many additional P2P file sharing networks as possible
 
-### More Technical Links
+## More Technical Links
 
 * https://en.wikipedia.org/wiki/Distributed_hash_table
 * https://en.wikipedia.org/wiki/Mainline_DHT
@@ -370,7 +370,7 @@ At this point we proceed with any new additions, bug fixes, etc. Some additional
 * https://unhosted.org/
 * http://edtechdev.wordpress.com/2013/05/10/serverless-unhosted-nobackend/ [see: WebP2P section]
 
-## UML
+# UML
 
 ![Bit451 technology stack](https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-technology-stack.png)
 
@@ -380,7 +380,7 @@ Bit451 technology stack
 
 Bit451 network "community" example
 
-## Contribute
+# Contribute
 
 There is essentially little-to-no "official" development team, as development is crowdsourced, ad hoc, and decentralized. In fact, the community as a whole is the dev team. This means that _anyone_ is able to contribute and collaborate in whatever ways work best for them. With the existence of Github, code can be forked and built upon any number of times by any number of contributors until a working solution is created. Solutions will then be audited, tested, and assessed by the community before being accepted.
 
@@ -390,11 +390,11 @@ If a deeply established, respected, and community-loved open source dev(s) were 
 
 _Now let us go and ignite a firestorm, planting the technological seedlings of the future over a trail of obsolete overgrowth!_
 
-## Roadmap / Timeline
+# Roadmap / Timeline
 
 3 Phases; the goal is ~1 month per phase (after initial discussion/planning phase). It should be completed by the end of the year. Yes, this is ambitious, but very much possible!
 
-## Goals and Features
+# Goals and Features
 
 * be as ambitious as possible and push the envelope... but still work!
 * improve and reuse other open source projects as possible
@@ -409,7 +409,7 @@ _Now let us go and ignite a firestorm, planting the technological seedlings of t
 * far-reaching implications, not only on immediate systems like media but on greater internet-wide concepts and processes
 * crossover appeal: "plug-and-play" interchangeability between different protocols which accomplish a similar goal
 
-## Discuss
+# Discuss
 
 * http://www.reddit.com/r/Bit451/
 * https://www.facebook.com/Bit451
@@ -417,20 +417,20 @@ _Now let us go and ignite a firestorm, planting the technological seedlings of t
 * &#35;Bit451
 * http://bitcointalk.bit451.org
 
-## Donate
+# Donate
 
 * https://coinbase.com/Bit451
 * https://www.indiegogo.com/projects/bit451
 
-## Architect
+# Architect
 
 Calen Fretts is a schemer, dreamer, believer, fighter, doer, troublemaker, idealist, voluntaryist, and many other -ists and -ers. Basically he's probably just crazy.
 
-## License
+# License
 
 MIT.
 
-## Bit451. Set. Go!
+# Bit451. Set. Go!
 
 http://Bit451.org
 
