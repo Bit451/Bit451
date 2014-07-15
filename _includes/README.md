@@ -90,9 +90,11 @@ __MediaDrop__
 
 MediaDrop is a modular video, audio, and podcast publication platform which can be extended with plugins: "The Web's Open Source Video Platform".
 
-__Action Item__: Fork MediaDrop to _Bit451 Portal_. Slim it down to just the "client-side" interface, and integrate programmatic interfaces for File Transfer networks.
+##### Portal Action Item
 
-_See Also_
+Fork MediaDrop to _Bit451 Portal_. Slim it down to just the "client-side" interface, and integrate programmatic interfaces for File Transfer networks.
+
+##### Portal Links
 
 * MediaDrop
   * http://mediadrop.net/
@@ -105,7 +107,7 @@ These are the protocols by which content files will be transmitted. BitTorrent, 
 
 A protocol-agnostic, generic interface will be available to be implemented for each protocol (in the Portal).
 
-_See Also_
+##### File Transfer Links
 
 * https://github.com/bittorrent/libutp
 * https://github.com/Storj/Metadisk
@@ -132,7 +134,9 @@ WebTorrent is a streaming torrent client for the browser using WebRTC. The Proje
 
 Since WebTorrent is web-first, it's simple for users who do not understand .torrent files, magnet links, NATs, etc. By making BitTorrent easier, it will be accessible to new swathes of users who were previously intimidated, confused, or unwilling to install a program on their machine to participate.
 
-__Action Item__: Fork WebTorrent to _Bit451 Portal Gateway - BitTorrent_, if not yet complete, and contribute to completion of the project, implementing any additional functionality if necessary.
+##### Portal Gateway Action Item
+
+Fork WebTorrent to _Bit451 Portal Gateway - BitTorrent_, if not yet complete, and contribute to completion of the project, implementing any additional functionality if necessary.
 
 _Alternative:_
 
@@ -144,7 +148,7 @@ A demo site/project called [oneHash](https://github.com/bittorrenttorque/onehash
 
 oneHash demonstrates the ability to stream torrent content via the browser. Currently only audio streaming is functional; video streaming is not yet completed as noted in the [Code Snippets](http://labs.bittorrent.com/developers/torque/code-snippets.html#file-streaming) page. If this is still the case by the time Bit451 development begins, it will need to be implemented.
 
-_See Also_
+##### Portal Gateway Links
 
 * WebTorrent
   * https://github.com/feross/webtorrent
@@ -177,7 +181,7 @@ As much as possible this should be decoupled from the Bit451 components' specifi
 
 A similar GUI client (see examples below) can be used as a starting point, and stripped down to what's needed.
 
-_See Also_
+##### Bit451 Service Links
 
 * https://github.com/bitcoin/bitcoin
 * https://github.com/spesmilo/electrum
@@ -262,13 +266,15 @@ Each Content represents a user-created reference to content on a P2P file sharin
 
 Any user can, of course, add any existing network content they wish to their Bit451 account. Bit451 will also introduce a brief template (with flags) to add to your content metadata which essentially verifies you as the owner.
 
-__Action Item__: Fork OrientDB to _Bit451 Database_. Implement any default config changes (group name/password, database name/password, etc) and other necessary modifications.
+##### Database Action Item
 
-_Notes_
+Fork OrientDB to _Bit451 Database_. Implement any default config changes (group name/password, database name/password, etc) and other necessary modifications.
+
+##### Database Notes
 
 * Hot change of distributed configuration not available until 2.0 (https://github.com/orientechnologies/orientdb/wiki/Distributed-Sharding#limitation)
 
-_See Also_
+##### Database Links
 
 * OrientDB
   * https://en.wikipedia.org/wiki/OrientDB
