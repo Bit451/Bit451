@@ -84,18 +84,29 @@ The goal of this phase is to create a standardized, usable, aesthetic, browser-b
 
 #### Portal
 
-The browser/viewport/gateway. This is the interface used to access and interact with content from the network. This should be usable on a local machine (via a local engine) as well as hosted from a server, where it can be additionally configured/customized.
+The browser/viewport/frontend. This is the interface used to access and interact with content from the network. This should be usable on a local machine (via a local engine) as well as hosted from a server, where it can be additionally configured/customized.
+
+__GreenAddress__
+
+GreenAddress is a sleek web wallet with the advantages of a local software wallet like Electrum: "The safer Bitcoin wallet that puts you in control".
+
+Bit451's fundamental structure is based around user accounts, and accounts are built on a deterministic wallet-type scheme, as GreenAddress is (see [Account Creation / Recovery](#account-creation-recovery) for more on this). GreenAddress also has a very aesthetic interface and is JavaScript-based, making it the optimal starting point for Bit451.
+
+##### Portal Action Item
+
+Fork GreenAddress to _[Bit451 Portal](https://github.com/Bit451/Bit451-Portal)_. Transform it to a media frontend, and integrate programmatic interfaces for File Transfer networks. [Bit451.com](http://bit451.com/) will serve the Portal directly from its GitHub dev repo, in its live state.
+
+_Alternative:_
 
 __MediaDrop__
 
 MediaDrop is a modular video, audio, and podcast publication platform which can be extended with plugins: "The Web's Open Source Video Platform".
 
-##### Portal Action Item
-
-Fork MediaDrop to _Bit451 Portal_. Slim it down to just the "client-side" interface, and integrate programmatic interfaces for File Transfer networks.
-
 ##### Portal Links
-
+* GreenAddress
+  * https://github.com/greenaddress/WalletCrx
+  * https://greenaddress.it/en/wallet/#/
+  * https://en.bitcoin.it/wiki/GreenAddress
 * MediaDrop
   * http://mediadrop.net/
   * http://demo.mediadrop.net/
@@ -197,13 +208,13 @@ The core of the Bit451 overlay network is its distributed data system. Options t
 
 __OrientDB__
 
-OrientDB is web ready (natively supports HTTP/RESTful protocol/JSON), cross-platform, embeddable (with local mode to bypass the server), has a footprint of only about 1MB for the full server, is well-supported/documented, supports drivers for Javascript (among others), database- and record-level security, and distributed architecture.
+OrientDB is web ready (natively supports HTTP/RESTful protocol/JSON), cross-platform, embeddable (with local mode to bypass the server), has a footprint of only about 1MB for the full server, is well-supported/documented, supports drivers for JavaScript (among others), database- and record-level security, and distributed architecture.
 
 ##### Database Functionality
 
 A primary functionality to be implemented for Bit451 is a security layer to: sign and verify records, selectively determine which records to query from/replicate, identify/block malicious nodes, etc.
 
-Bit451 will embed the database in a thin wrapper client and interact via its Javascript driver. Each node acts as a server and represents an Account. Each record should be signed with a hash of ALL its fields (including ID, timestamp, and Account ID, etc) and public and private key, and then when verifying simply remove the signature (sig) and check against it. The client should enforce incoming data integrity, rate limit/protect against DoS attacks, etc (basically act as database gatekeeper).
+Bit451 will embed the database in a thin wrapper client and interact via its JavaScript driver. Each node acts as a server and represents an Account. Each record should be signed with a hash of ALL its fields (including ID, timestamp, and Account ID, etc) and public and private key, and then when verifying simply remove the signature (sig) and check against it. The client should enforce incoming data integrity, rate limit/protect against DoS attacks, etc (basically act as database gatekeeper).
 
 Database connections should also be authenticated so that, for example, a hosted Bit451 installation cannot rely on a single naive user as its direct database connection/server. The user should also have the option to allow unauthenticated connections, i.e. to be an open host.
 
@@ -225,7 +236,9 @@ A replication Hook will be used to replicate only records from one's T-Net (aggr
 
 Because of the community-oriented nature of Bit451 networks, "bootstrapping" is not, in the conventional sense, necessary. Rather, new users will simply Subscribe (network with) and/or Mimic (network with connections of) the Account(s) they trust. Ideally a new user can simply Mimic a trusted Account from their community, and will instantly join the network of all of that Account's Recommendations.
 
-###### Account Recovery
+<a name="account-recovery"></a>
+
+###### Account Creation / Recovery
 
 In the event that a private key is compromised, there should be a recovery method. Traditional methods such as email aren't suitable, and a new ID can't simply be generated since the account is tied to the ID. 
 
@@ -249,9 +262,13 @@ Since Bit451 data is stored in a DDB, this is relatively simple, as searches are
 
 ##### Database Classes
 
+__Key__
+
+-> referenced/linked relationships
+
 ###### Accounts
 
-Each Account represents a user, similar to profiles or channels. Properties include ID, name, about, favorites[], ratings[], subscriptions[], recommendations[], ignores[], mimics[], address (IP/port), cert (DNS TXT record), created, updated, deleted?, key, sig.
+Each Account represents a user, similar to profiles or channels. Properties include ID, name, about, favorites[]->, ratings[]->, subscriptions[]->, recommendations[]->, ignores[]->, mimics[]->, address (IP/port), cert (DNS TXT record), created, updated, deleted?, key, sig.
 
 * Favorites: Each Favorite represents a reference to a Content.
 * Ratings: Each Rating represents a reference to a Content (similar to a Like/Dislike or Upvote/Downvote, i.e. binary).
@@ -264,11 +281,11 @@ Each Account represents a user, similar to profiles or channels. Properties incl
 
 Each Content represents a user-created reference to content on a P2P file sharing network. Properties include ID, Account ID, address{} (object denoting network, ID, and any other data required for that network), name, description, tags[], type{video, audio, image, text, other}, created, updated, deleted?, key, sig.
 
-Any user can, of course, add any existing network content they wish to their Bit451 account. Bit451 will also introduce a brief template (with flags) to add to your content metadata which essentially verifies you as the owner.
+Any user can, of course, add any existing network content they wish to their Bit451 account. Bit451 will also introduce a brief template (with flags) to add to your network content metadata (i.e. torrent) which essentially verifies you as the owner.
 
 ##### Database Action Item
 
-Fork OrientDB to _Bit451 Database_. Implement any default config changes (group name/password, database name/password, etc) and other necessary modifications.
+Fork OrientDB to _[Bit451 Database](https://github.com/Bit451/Bit451-Database)_. Implement any default config changes (group name/password, database name/password, etc) and other necessary modifications.
 
 ##### Database Notes
 
@@ -311,7 +328,9 @@ The goal of this phase is to complete/enhance/granularize the Bit451 functionali
 
 #### Anonymity
 
-Provide ability to disable last known IP/port field in Account records, essentially allowing nodes to push/replicate data without being able to be connected to, as well as ability to encrypt traffic.
+Provide ability to disable last known IP/port field in Account records, essentially allowing nodes to push/replicate data without being able to be connected to, as well as ability to encrypt traffic. There are plenty of reference points starting from [anonymous P2P](https://en.wikipedia.org/wiki/Anonymous_P2P#Functioning_of_anonymous_P2P), [I2P](https://en.wikipedia.org/wiki/I2P) (end-to-end encryption), [Tor](https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29), etc. This refers only to the Bit451 Database data, of course.
+
+The media content itself comes from the various P2P file sharing networks, so anonymity at this point is the responsibility of each network and/or the client used. The user has the option to select the networks they wish to access.
 
 #### Payments
 
@@ -342,13 +361,26 @@ Tagging and searching of Content and Accounts via Hashtags.
 
 Can be stored locally initially, and eventually via optionally (paid?) remotely hosted protocol.
 
-###### Similar Accounts/Content
+<a name="similar-accountscontent"></a>
 
-Graph depth can be explored to find similar data to recommend to the user.
+###### Similar Accounts / Content
+
+Graph depth can be explored to find similar/related data to recommend to the user.
+
+###### Comments
+
+Account: Properties include comments[]->, moderators[]->, commentsMode (mode bits for: Account-level, Content-level, defer?).
+
+* Comments: Each Comment represents a reference to an Account _or_ Content, which the user has commented on.
+* Moderators: Each Moderator represents a reference to an Account, which the user wishes to allow to moderate comments.
+
+Content: Properties include comments[]->, moderators[]->, commentsMode (mode bits for: Content-level, defer?)
+
+* Comments: Each Comment represents a reference to another user's comment on this Content, which the user owning this Content has moderated (approved/rejected).
 
 #### Bit451 Lite
 
-Provides the ability to _fully_ participate in Bit451 actions (creating/modifying accounts/content, etc) directly via the browser using Javascript, so the user is not required to run the Bit451 Service to access the network.
+Provides the ability to _fully_ participate in Bit451 actions (creating/modifying accounts/content, etc) directly via the browser using JavaScript, so the user is not required to run the Bit451 Service to access the network.
 
 ### Phase 3 Results
 
