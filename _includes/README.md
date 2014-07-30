@@ -90,7 +90,7 @@ __GreenAddress__
 
 GreenAddress is a sleek web wallet with the advantages of a local software wallet like Electrum: "The safer Bitcoin wallet that puts you in control".
 
-Bit451's fundamental structure is based around user accounts, and accounts are built on a deterministic wallet-type scheme, as GreenAddress is (see [Account Creation / Recovery](#account-creation-recovery) for more on this). GreenAddress also has a very aesthetic interface and is JavaScript-based, making it the optimal starting point for Bit451.
+Bit451's fundamental structure is based around user accounts, and accounts are built on a deterministic wallet-type scheme, as GreenAddress is (see [Account Creation / Recovery](#account-creation--recovery) for more on this). GreenAddress also has a very aesthetic interface and is JavaScript-based, making it the optimal starting point for Bit451.
 
 ##### Portal Action Item
 
@@ -104,7 +104,7 @@ MediaDrop is a modular video, audio, and podcast publication platform which can 
 
 ##### Portal Links
 * GreenAddress
-  * https://github.com/greenaddress/WalletCrx
+  * https://github.com/greenaddress/WalletCordova
   * https://greenaddress.it/en/wallet/#/
   * https://en.bitcoin.it/wiki/GreenAddress
 * MediaDrop
@@ -303,7 +303,7 @@ Fork OrientDB to _[Bit451 Database](https://github.com/Bit451/Bit451-Database)_.
   * https://github.com/orientechnologies/orientdb/wiki/Hook
   * https://github.com/orientechnologies/orientdb/wiki/Javascript-Driver
 * Web Wallets
-  * https://github.com/greenaddress/WalletCrx
+  * https://github.com/greenaddress/WalletCordova
   * https://github.com/carbonwallet/carbonwallet.github.io
   * https://github.com/blockchain/My-Wallet [non-deterministic]
 * https://en.wikipedia.org/wiki/Distributed_database
@@ -413,6 +413,10 @@ At this point we proceed with any new additions, bug fixes, etc. Some additional
 ![Bit451 technology stack](https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-technology-stack.png)
 
 Bit451 technology stack
+
+![Bit451 Portal technology stack](https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-portal-technology-stack.png)
+
+Bit451 Portal technology stack
 
 ![Bit451 network "community" example](https://raw.githubusercontent.com/Bit451/Bit451/master/uml/bit451-network-community.png)
 
